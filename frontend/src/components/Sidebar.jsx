@@ -77,7 +77,7 @@ const Sidebar = () => {
         <div className="mt-16 flex flex-col items-center text-center md:mt-2">
           <div className="mb-5 h-28 w-28 overflow-hidden rounded-full border border-orange-100 p-1 shadow-sm">
             <img
-              src="/Hemant.png"
+              src="/Hemant.webp"
               alt="Hemant Chauhan"
               className="h-full w-full rounded-full object-cover"
             />
