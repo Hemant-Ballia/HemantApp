@@ -58,17 +58,17 @@ const techIcons = {
 };
 
 const projectsData = [
-{
+  {
     id: 1, 
     title: "AI Resume Builder",
     category: "Full Stack",
     description: "A modern SaaS platform empowering users to create professional, ATS-friendly resumes with Gemini AI content suggestions and real-time previews.",
-tech: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "ImageKit"],
+    tech: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "ImageKit"],
     liveLink: "https://resume-client-umber.vercel.app", 
     githubLink: "https://github.com/Hemant-Ballia/Resume-Builder",
     image: aiResumeImg,
   },
- {
+  {
     id: 2, 
     title: "Forever Web App",
     category: "Full Stack",
@@ -78,22 +78,21 @@ tech: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "ImageKit"],
     githubLink: "https://github.com/Hemant-Ballia/ForeverWebApp",
     image: ecoImg,
   },
- {
+  {
     id: 3, 
     title: "My-Fav Music Player App",
     category: "JavaScript",
     description: "A native web audio player application for managing personal music collections, built with HTML, CSS, and Vanilla JavaScript. Features a unique, low-fi interface, dynamic playlist controls, and real-time audio playback management.",
     tech: ["HTML5", "CSS3", "JavaScript"],
-    liveLink: "https://hemant-fav-player.vercel.app", // Apna live link yahan update karein
-    githubLink: "https://github.com/Hemant-Ballia/My-Fav-Music-Player", // Apna repo link yahan update karein
+    liveLink: "https://hemant-fav-player.vercel.app",
+    githubLink: "https://github.com/Hemant-Ballia/My-Fav-Music-Player",
     image: musicPlayerImg,
   },
   {
     id: 4,
     title: "WeatherNow App",
     category: "JavaScript",
-    description:
-      "A modern weather application with real-time weather updates and responsive UI.",
+    description: "A modern weather application with real-time weather updates and responsive UI.",
     tech: ["HTML5", "CSS3", "JavaScript", "Weather API"],
     liveLink: "https://hemant-ballia.github.io/weathernow-app/",
     githubLink: "https://github.com/Hemant-Ballia/weathernow-app",
@@ -212,14 +211,13 @@ tech: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "ImageKit"],
   {
     id: 16,
     title: "Calculator",
-   category: "JavaScript",
+    category: "JavaScript",
     description: "A modern, responsive, and elegant calculator web application built with HTML, CSS, and JavaScript. Features a sleek indigo-themed UI with advanced gradient effects, soft shadows, real-time expression rendering, and full keyboard input support.",
     tech: ["HTML5", "CSS3", "JavaScript"],
     liveLink: "https://calculator-project-ten-cyan.vercel.app",
     githubLink: "https://github.com/Hemant-Ballia/calculator-project",
     image: cal, 
   },
-
 ];
 
 const categories = [
@@ -234,18 +232,11 @@ const categories = [
 const ProjectsSection = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
+  // FIXED THE FILTERING LOGIC HERE
   const filteredProjects =
     activeFilter === "All"
       ? projectsData
-      : projectsData.filter((project) => {
-          if (activeFilter === "HTML/CSS") {
-            return (
-              project.tech.includes("HTML5") ||
-              project.tech.includes("CSS3")
-            );
-          }
-          return project.category === activeFilter;
-        });
+      : projectsData.filter((project) => project.category === activeFilter);
 
   return (
     <section
@@ -254,7 +245,7 @@ const ProjectsSection = () => {
     >
       <div className="max-w-7xl mx-auto">
         
-        {/* Heading & Filters Container - Changed to flex-col to give filters 100% width */}
+        {/* Heading & Filters Container */}
         <div className="flex flex-col gap-6 mb-12">
           
           <div className="max-w-2xl">
@@ -268,7 +259,7 @@ const ProjectsSection = () => {
             </p>
           </div>
 
-          {/* Filters - Now they have their own line and full space to breathe */}
+          {/* Filters */}
           <div className="w-full overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             <div className="inline-flex items-center gap-1.5 bg-white border border-zinc-200 rounded-xl p-1.5 min-w-max">
               {categories.map((category) => (
