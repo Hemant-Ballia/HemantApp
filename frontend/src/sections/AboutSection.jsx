@@ -34,7 +34,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="w-full bg-white py-16 md:py-24 px-6 md:px-12 overflow-hidden"
+      className="w-full bg-white py-16 md:py-24 px-5 md:px-12 overflow-hidden"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {/* Section Heading */}
@@ -45,14 +45,14 @@ const AboutSection = () => {
 
         <p className="mt-5 text-[15px] md:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto">
           B.Sc. Computer Science and Data Analytics student at IIT Patna with a
-          strong interest in full-stack development and data-driven systems.
+          strong interest in full-stack development and Data Analytics.
         </p>
       </div>
 
       {/* Main Content */}
       <div className="max-w-[1300px] mx-auto grid lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-14 xl:gap-20 items-center">
         
-        {/* Left Image (Enlarged and removed hover effects) */}
+        {/* Left Image */}
         <div className="flex justify-center lg:justify-start w-full">
           <div className="relative w-full max-w-[420px] lg:max-w-[480px] xl:max-w-[520px] rounded-3xl overflow-hidden border border-gray-200 bg-gray-100 shadow-md">
             {/* Light Overlay */}
@@ -67,14 +67,16 @@ const AboutSection = () => {
         </div>
 
         {/* Right Content */}
-        <div className="w-full max-w-[650px] mx-auto lg:mx-0">
-          {/* Main Heading (Forced to single line with responsive font size) */}
-          <h3 className="text-2xl md:text-3xl lg:text-[32px] xl:text-[36px] font-bold text-gray-900 leading-tight tracking-tight whitespace-nowrap">
+        {/* FIXED: Added w-full max-w-full overflow-hidden to prevent any child from pushing parent */}
+        <div className="w-full max-w-full lg:max-w-[650px] mx-auto lg:mx-0 overflow-hidden">
+          
+          {/* Main Heading (FIXED: Exact sizing for mobile to fit 33 characters on one line) */}
+          <h3 className="text-[15px] min-[375px]:text-[17px] sm:text-[22px] md:text-3xl lg:text-[32px] xl:text-[36px] font-bold text-gray-900 leading-tight tracking-tight whitespace-nowrap">
             Computer Science & Data Analytics
           </h3>
 
           {/* Description */}
-          <div className="mt-6 space-y-4 text-gray-600 leading-relaxed text-[15px] md:text-base">
+          <div className="mt-6 space-y-4 text-gray-600 leading-relaxed text-[15px] md:text-base whitespace-normal">
             <p>
               I’m currently in my 4th semester at IIT Patna with a current SPI of
               9.40. I was awarded the INSPIRE Scholarship by the Government of

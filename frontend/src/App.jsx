@@ -17,7 +17,8 @@ function App() {
       <Sidebar />
 
       {/* Main Content */}
-      <main className="flex w-full flex-col overflow-x-hidden md:pl-64">
+      {/* ADDED: pt-20 md:pt-0 to prevent content from hiding behind mobile fixed navbar */}
+      <main className="flex w-full flex-col overflow-x-hidden md:pl-64 pt-20 md:pt-0">
         
         {/* Top Banner */}
         <TopBanner />
