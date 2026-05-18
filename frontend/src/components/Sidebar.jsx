@@ -165,9 +165,9 @@ const Sidebar = () => {
             </a>
           </div>
 
-          {/* Resume Button */}
+         {/* Resume Button */}
           <a
-            href="/resume.pdf"
+            href="/Hemant_Chauhan_24a12res941.pdf"  
             target="_blank"
             className="flex items-center justify-center rounded-2xl bg-orange-500 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-orange-600"
           >
