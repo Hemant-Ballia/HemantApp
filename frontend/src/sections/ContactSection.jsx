@@ -56,9 +56,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="w-full bg-white py-20 px-6 md:px-12 flex items-center justify-center relative">
+    <section id="contact" className="w-full bg-white py-20 px-6 md:px-12 flex items-center justify-center relative overflow-x-hidden">
       
-      {/* Toast Notification Component - Position Updated Here 👇 */}
+      {/* Toast Notification Component */}
       <Toaster 
         position="top-right"
         toastOptions={{
@@ -74,16 +74,16 @@ const ContactSection = () => {
       <div className="grid md:grid-cols-2 md:gap-10 lg:gap-16 max-w-6xl w-full items-center">
 
         {/* Left Side: Clean Form */}
-        <div className="p-2 md:p-5">
+        <div className="p-2 md:p-5 w-full">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 mb-3">
             Get in touch
           </h2>
           <p className="text-[15px] text-zinc-500 mb-8 leading-relaxed max-w-[400px]">
-            Have a question or idea? Our approachable team would love to connect and support you.
+            Have a question, a project idea, or just want to say hi? I'd love to connect and chat with you.
           </p>
 
-          <form onSubmit={handleSubmit}>
-            <div className="grid grid-cols-2 gap-4 mb-5">
+          <form onSubmit={handleSubmit} className="w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
               <div>
                 <label className="block text-sm font-medium text-zinc-600 mb-2">First name</label>
                 <input 
@@ -124,7 +124,7 @@ const ContactSection = () => {
 
             <div className="mb-5">
               <label className="block text-sm font-medium text-zinc-600 mb-2">Phone number</label>
-              <div className="flex border border-zinc-200 rounded-xl overflow-hidden focus-within:border-orange-500 focus-within:ring-1 focus-within:ring-orange-500 transition-all bg-zinc-50/50">
+              <div className="flex w-full border border-zinc-200 rounded-xl overflow-hidden focus-within:border-orange-500 focus-within:ring-1 focus-within:ring-orange-500 transition-all bg-zinc-50/50">
                 <select className="px-3 py-3 text-sm outline-none cursor-pointer text-zinc-500 bg-transparent border-r border-zinc-200">
                   <option>IN</option>
                   <option>US</option>
@@ -136,7 +136,7 @@ const ContactSection = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+91 98765 43210" 
-                  className="flex-1 px-4 py-3 text-sm outline-none bg-transparent" 
+                  className="flex-1 w-full min-w-0 px-4 py-3 text-sm outline-none bg-transparent" 
                 />
               </div>
             </div>
