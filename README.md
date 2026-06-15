@@ -44,5 +44,4 @@ An internal tool for managing workforce data.
 ## 📫 Connect with me
 
 * **LinkedIn:** [linkedin.com/in/hemant-chauhan-839a41322](https://www.linkedin.com/in/hemant-chauhan-839a41322)
-* **LeetCode:** [Your LeetCode Link]
 * **Email:** hemantchauhan221709@gmail.com
