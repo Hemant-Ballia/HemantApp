@@ -9,7 +9,7 @@ Hi! I'm a developer currently studying Computer Science and Data Analytics at II
 ## 🛠 Tech Stack
 
 * **Languages:** JavaScript/TypeScript, Python, C++, SQL
-* **Frontend:** React.js, Next.js, Tailwind CSS, GSAP, Framer Motion
+* **Frontend:** React.js, Next.js, Tailwind CSS,  Framer Motion
 * **Backend:** Node.js, Express.js, REST APIs, JWT Authentication
 * **Database:** MongoDB
 
